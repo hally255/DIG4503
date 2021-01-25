@@ -1,13 +1,19 @@
-const axios = require('axios');
+const axios = require("axios");
 
-//fetch the url
-axios('/user?ID=12345')
-    //then
+axios("https://pokeapi.co/api/v2/pokemon/grookey")
     .then(function (response) {
-        //handles the success
-        console.log(response);
+        const pokemon = response.data;
+
+        if (pokemon.name == "scorbunny") {
+            console.log("Don't forget to give " + pokemon.name + " a snack after a hard fight!");
+        } else if (pokemon.name == "grookey") {
+            console.log("Don't forget to give " + pokemon.name + " a snack after a hard fight!");
+        } else if (pokemon.name == "sobble") {
+            console.log("Don't forget to give " + pokemon.name + " a snack after a hard fight!");
+        } else {
+            console.log("Not all pokemon need snacks...")
+        }
     })
     .catch(function (error) {
-        //handles error
-        console.log(error);
+        console.log("error: " + error);
     });

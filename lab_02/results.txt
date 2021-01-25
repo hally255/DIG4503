@@ -1,0 +1,8 @@
+PS C:\Users\hally\Desktop\rapid_app\week_3> node index.js
+Don't forget to give scorbunny a snack after a hard fight!
+PS C:\Users\hally\Desktop\rapid_app\week_3> node index.js
+Don't forget to give grookey a snack after a hard fight!
+PS C:\Users\hally\Desktop\rapid_app\week_3> node index.js
+Don't forget to give sobble a snack after a hard fight!
+PS C:\Users\hally\Desktop\rapid_app\week_3> node index.js
+error: Error: Request failed with status code 404
