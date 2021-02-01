@@ -1,0 +1,17 @@
+{
+  "name": "rapid_app",
+  "version": "1.0.0",
+  "description": "classwork",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "formidable": "^1.2.2",
+    "nodemailer": "^6.4.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarah Geraci",
+  "license": "ISC"
+}
