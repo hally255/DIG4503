@@ -1,0 +1,24 @@
+
+const dragon = {
+    scales: "green",
+    breath: "fire",
+    hoard: {
+        treasure: {
+            gold: 1500,
+            jewels: 500
+        },
+        valuables: {
+            art: "masterworks stolen from the king",
+            marble: "stolen from the gardens"
+        }
+    }
+}
+
+//basic accessing arrays
+const treasure = dragon.hoard.treasure;
+const valuables = dragon.hoard.valuables;
+
+//destruturing arrays
+const { gold, jewels } = dragon.hoard.treasure;
+
+console.log(gold, jewels)

@@ -1,0 +1,9 @@
+const sky = "blue";
+
+//regular function notation
+color = function (sky) {
+    console.log("the sky is " + sky);
+};
+
+//arrow notation
+color = sky => console.log("the sky is " + sky);
