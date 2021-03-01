@@ -1,0 +1,76 @@
+#content {
+  width: 80%;
+  margin: auto;
+}
+
+div {
+  background-color: darkorchid;
+}
+
+.comment {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  margin: auto;
+  width: 90%;
+  background-color: white;
+}
+
+.comment:last-child {
+  border: none;
+}
+
+.comment h4 {
+  display: inline-block;
+  width: 30%;
+}
+
+.comment p {
+  display: inline-block;
+  width: 60%;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+}
+
+.article {
+  padding: 50px;
+  background-color: white;
+}
+
+.article:first-child {
+  border-bottom: 10px solid darkorchid;
+}
+
+.counter {
+  background-color: white;
+  margin-top: 50px;
+}
+
+.counter p {
+  font-size: 1.3em;
+  display: inline-block;
+  width: auto;
+  margin-left: 15px;
+}
+
+.counter button {
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 1.2em;
+  background-color: white;
+  border: 2px solid mediumorchid;
+  border-radius: 15px;
+  display: inline-block;
+  width: auto;
+}
+
+.counter button:hover {
+  background-color: mediumorchid;
+  color: white;
+}
