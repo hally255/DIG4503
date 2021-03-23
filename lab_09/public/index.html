@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function readName(event) {
+            event.preventDefault();
+
+            let element = document.getElementById("name");
+
+            fetch("/employees/name/" + element.value).then((res) => {
+                return res.json();
+            }).then((processed) => {
+                let report = document.getElementById("reportArea");
+
+                if (processed.error) {
+                    report.innerHTML = processed.error;
+                } else {
+                    report.innerHTML = processed.age;
+                }
+            });
+        }
+
+        function readAge(event) {
+            event.preventDefault();
+
+            let element = document.getElementById("age");
+
+            fetch("/employees/age/" + element.value).then((res) => {
+                return res.json();
+            }).then((processed) => {
+                let report = document.getElementById("reportArea");
+
+                if (processed.error) {
+                    report.innerHTML = processed.error;
+                } else {
+                    report.innerHTML = processed.name;
+                }
+            });
+        }
+
+        function createEmployee(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("employeeName");
+            let age = document.getElementById("employeeAge");
+
+            fetch("/employees/" + name.value + "/" + age.value, {
+                "method": "post"
+            }).then((res) => {
+                return res.json();
+            }).then((processed) => {
+                console.log(processed);
+            });
+        }
+    </script>
+    <h2>Name</h2>
+    <form onsubmit="readName(event)">
+        <input id="name" type="text">
+        <input type="submit" value="Submit" id="submitName">
+    </form>
+    <br>
+    <h2>Age</h2>
+    <form onsubmit="readAge(event)">
+        <input id="age" type="text">
+        <input type="submit" value="Submit" id="submitAge">
+    </form>
+    <hr><br>
+    <h2>Report</h2>
+    <div id="reportArea"></div>
+    <hr><br>
+    <h2>New Employee Name and Age</h2>
+    <form onsubmit="createEmployee(event)">
+        <input id="employeeName" type="text">
+        <input id="employeeAge" type="text">
+        <input type="submit" value="Submit" id="newEmployee">
+    </form>
+</body>
+
+</html>
