@@ -7,13 +7,13 @@ MongoClient.connect(URL, { useUnifiedTopology: true }).then(connetion => {
 
     let collection = database.collection("listingsAndReviews");
 
-    let cursor = collection.find({ minimum_nights: { $eq: 2 } });
+    let cursor = collection.find({ number_of_reviews: { $gte: 99 }, beds: { $gte: 5 }, price: { $lte: 200 } });
 
     cursor.forEach(document => {
         console.log(document.name);
     }, () => {
         connetion.close();
-    })
+    });
 }).catch(error => {
     console.log("Error: " + error);
 });
