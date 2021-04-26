@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title></title>
+    <script src="../login.js"></script>
+</head>
+
+<body>
+    <script>
+        function readPassword(event) {
+            event.preventDefault();
+
+            let element = document.getElementById("password");
+
+            fetch("/users/password/" + element.value).then((res) => {
+                return res.json();
+            }).then((processed) => {
+                let report = document.getElementById("reportArea");
+
+                if (processed.error) {
+                    report.innerHTML = processed.error;
+                } else {
+                    report.innerHTML = processed.username;
+                }
+            });
+        }
+
+        function readPassword(event) {
+            event.preventDefault();
+
+            let element = document.getElementById("password");
+
+            fetch("/users/password/" + element.value).then((res) => {
+                return res.json();
+            }).then((processed) => {
+                let report = document.getElementById("reportArea");
+
+                if (processed.error) {
+                    report.innerHTML = processed.error;
+                } else {
+                    report.innerHTML = processed.username;
+                }
+            });
+        }
+    </script>
+    <h2>Password</h2>
+    <form onsubmit="readPassword(event)">
+        <input id="password" name="password" type="password">
+        <input type="submit" value="Submit" id="submitPassword">
+    </form>
+    <hr><br>
+    <h2>Welcome back!</h2>
+    <div id="reportArea"></div>
+    <h4>Your Movies</h4>
+    <div id="movieList"></div>
+</body>
+
+</html>
